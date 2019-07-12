@@ -11,6 +11,14 @@
         document.getElementById("timeLabel").textContent =
           "You entered " + inputTime + ".";
       }
+
+      function download(text, name, type) {
+        var a = document.getElementById("a");
+        var file = new Blob([text], { type: type });
+        a.href = URL.createObjectURL(file);
+        a.download = name;
+      }
+
       $(document).ready(function() {
         var input = $("#timeInput");
         input.clockpicker({
@@ -29,6 +37,11 @@
         <input id="timeInput" value="Click Here" onChange="myFunct()" />
       </p>
       <p><label id="timeLabel" for="time"></label></p>
+      <a href="" id="a">click here to download your time as a file</a>
+      <!-- <button onclick="download('file text', 'myfilename.txt', 'text/plain')"> -->
+        <button onclick="download('file text', 'myfilename.txt', 'text/plain')"></button>
+        Create file
+      </button>
     </fieldset>
   </body>
 </html>
