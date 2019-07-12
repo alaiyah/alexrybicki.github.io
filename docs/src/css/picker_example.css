@@ -1,0 +1,17 @@
+body {
+    padding: 100px 0;
+}
+
+fieldset {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+}
+
+p * {
+    margin: auto;
+}
+
+input {
+    text-align: center;
+}

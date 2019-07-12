@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="./css/clockpicker2.css">
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/clockpicker2.css" />
+    <link rel="stylesheet" type="text/css" href="./css/picker_example.css" />
     <script defer src="./js/clockpicker2.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
-        function myFunct() {
-            var inputTime = document.getElementById('timeInput').value;
-            document.getElementById('timeLabel').textContent = "You entered " + inputTime + "."
-        }
-        $(document).ready(function () {
-            var input = $('#timeInput');
-            input.clockpicker({
-                twelvehour: true, //12 hour time
-                donetext: 'Done',
-                vibrate: true,
-            });
+      function myFunct() {
+        var inputTime = document.getElementById("timeInput").value;
+        document.getElementById("timeLabel").textContent =
+          "You entered " + inputTime + ".";
+      }
+      $(document).ready(function() {
+        var input = $("#timeInput");
+        input.clockpicker({
+          twelvehour: true, //12 hour time
+          donetext: "Done",
+          vibrate: true
         });
+      });
     </script>
-</head>
+  </head>
 
-<body>
-    <p>
-        <input id="timeInput" value="Click Here" onChange="myFunct()">
-        <label id="timeLabel" for="time"></label>
-    </p>
-</body>
+  <body>
+    <fieldset>
+      <legend>Clock Picker</legend>
+      <p>
+        <input id="timeInput" value="Click Here" onChange="myFunct()" />
+      </p>
+      <p><label id="timeLabel" for="time"></label></p>
+    </fieldset>
+  </body>
+</html>
